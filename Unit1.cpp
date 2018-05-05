@@ -14,13 +14,13 @@ __fastcall TForm1::TForm1(TComponent* Owner)
 {
 }
 //---------------------------------------------------------------------------
-  #define MY_ENCODING_TYPE  (PKCS_7_ASN_ENCODING | X509_ASN_ENCODING)
-static void HandleError(char *s);
-static void CleanUp(void);
-
-static HCRYPTPROV hCryptProv = 0;
-static HCRYPTKEY hKey = 0;
-static HCRYPTHASH hHash = 0;
+//  #define MY_ENCODING_TYPE  (PKCS_7_ASN_ENCODING | X509_ASN_ENCODING)
+//static void HandleError(char *s);
+//static void CleanUp(void);
+//
+//static HCRYPTPROV hCryptProv = 0;
+//static HCRYPTKEY hKey = 0;
+//static HCRYPTHASH hHash = 0;
 
 int main(void)
 {
@@ -30,8 +30,14 @@ int main(void)
 
 void __fastcall TForm1::FormCreate(TObject *Sender)
 {
-	Prov = PROV_GOST_DH;
+//	Prov = PROV_GOST_DH;
+	UserName = GetUserName();
+	Edit1->Text = UserName;
+}
 
+String TForm1::GetUserName(){
+	return EditUserName->Text;
 }
 //---------------------------------------------------------------------------
+
 
