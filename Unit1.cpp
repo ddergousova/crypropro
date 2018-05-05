@@ -7,9 +7,9 @@
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
-TForm1 *Form1;
+TCryptoForm *CryptoForm;
 //---------------------------------------------------------------------------
-__fastcall TForm1::TForm1(TComponent* Owner)
+__fastcall TCryptoForm::TCryptoForm(TComponent* Owner)
 	: TForm(Owner)
 {
 }
@@ -28,7 +28,7 @@ int main(void)
 }
 
 
-void __fastcall TForm1::FormCreate(TObject *Sender)
+void __fastcall TCryptoForm::FormCreate(TObject *Sender)
 {
 	Prov = PROV_GOST_DH;
 
