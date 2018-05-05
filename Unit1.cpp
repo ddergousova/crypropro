@@ -27,3 +27,11 @@ int main(void)
 
 }
 
+
+void __fastcall TForm1::FormCreate(TObject *Sender)
+{
+	Prov = PROV_GOST_DH;
+
+}
+//---------------------------------------------------------------------------
+
